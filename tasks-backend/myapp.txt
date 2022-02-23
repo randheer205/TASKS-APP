@@ -1,0 +1,32 @@
+Its tasks app with task,user app modules.
+
+User:
+-Signup = POST /user/signup
+-Signin = POST /user/signin
+-View Profile = GET /user/profile
+-Update Profile = PUT /user/profile
+-Delete Profile = DELETE /user/profile
+-Logout
+
+Tasks:
+-Create Tasks = POST /task/
+-View Task = GET /task/all          <---|   CREATED IN
+-View Task = GET /task/:type        <---|THE SAME FUNCTION 
+-Update Task = PUT /task/:id
+-Delete Tasks = DELETE /task/:id
+
+FROM SO CALLED NESTJS APP POV:
+AppModule:
+    UserModule:
+        -UserController
+        -UserService
+    TaksModule:
+        -TaskController
+        -TaskService
+
+
+INSTALLED LIBS:
+-uuid
+-class-validator
+-class-trasnformer
+-typeorm/nestjs mysql2
